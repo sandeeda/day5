@@ -16,8 +16,8 @@ public class Student {
 		super();
 		this.rollNo = rollNo;
 		String regx = "[a-zA-Z]+\\.?";
-	    Pattern pattern = Pattern.compile(regx,Pattern.CASE_INSENSITIVE);
-	    Matcher matcher = pattern.matcher(this.name);
+	    Pattern pattern = Pattern.compile("[a-zA-Z]*");
+	    Matcher matcher = pattern.matcher(name);
 		if(matcher.find())
 	    this.name = name;
 		else

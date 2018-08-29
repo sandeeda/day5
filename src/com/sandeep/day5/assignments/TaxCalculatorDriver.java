@@ -18,7 +18,7 @@ public class TaxCalculatorDriver {
 		try(Scanner in = new Scanner(System.in))
 		{
 			
-			tax=taxcal.calculateTax("sandeep das", true, 500);
+			tax=taxcal.calculateTax("sandeep das", true, 123456);
 			System.out.println("Tax amount is : "+tax);
 			
 			

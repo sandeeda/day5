@@ -12,13 +12,11 @@ public class Student {
 	private String name;
 	private int age;
 	private String course;
-	public Student(int rollNo, String name, int age, String course) throws AgeNotWithinRangeException, NameNotValidException {
+	public  Student(int rollNo, String name, int age, String course) throws AgeNotWithinRangeException, NameNotValidException {
 		super();
 		this.rollNo = rollNo;
-		String regx = "[a-zA-Z]+\\.?";
-	    Pattern pattern = Pattern.compile("[a-zA-Z]*");
-	    Matcher matcher = pattern.matcher(name);
-		if(matcher.find())
+		 String expression = "^[a-zA-Z\\s]+"; 
+		    if(name.matches(expression))    
 	    this.name = name;
 		else
 			throw new NameNotValidException("Invalid name");
